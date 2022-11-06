@@ -2,6 +2,7 @@ const {
     numpy
 } = require('./worker');
 
+// Function to Get Enum Type..
 function getEnumType(words) {
     const lent = words.split(' ');
     let numType = Object.keys(numpy);
@@ -9,55 +10,15 @@ function getEnumType(words) {
     console.log(numType);
     lent.forEach((word) => {
         switch (word) {
-            case 'addition': {
+            case 'addition': case 'plus': case 'sum': case 'add': case 'summation': {
                 ans = numType[0];
             }
                 break;
-            case 'plus': {
-                ans = numType[0];
-            }
-                break;
-            case 'sum': {
-                ans = numType[0];
-            }
-                break;
-            case 'add': {
-                ans = numType[0];
-            }
-                break;
-            case 'summation': {
-                ans = numType[0];
-            }
-                break;
-            case 'subtraction': {
+            case 'subtraction': case 'subtract': case 'difference': case 'minus': {
                 ans = numType[1];
             }
                 break;
-            case 'subtract': {
-                ans = numType[1];
-            }
-                break;
-            case 'difference': {
-                ans = numType[1];
-            }
-                break;
-            case 'minus': {
-                ans = numType[1];
-            }
-                break;
-            case 'multiplication': {
-                ans = numType[2];
-            }
-                break;
-            case 'multiply': {
-                ans = numType[2];
-            }
-                break;
-            case 'product': {
-                ans = numType[2];
-            }
-                break;
-            case 'times': {
+            case 'multiplication': case 'multiply': case 'poduct': case 'times': {
                 ans = numType[2];
             }
                 break;
@@ -66,6 +27,7 @@ function getEnumType(words) {
     return (ans);
 }
 
+// Export Enum Type Function..
 module.exports = {
     getEnumType,
 }

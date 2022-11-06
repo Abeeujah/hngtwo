@@ -1,3 +1,4 @@
+// Require Worker and Enum type Functions..
 const {
     postWorker,
 } = require('../model/worker');
@@ -5,6 +6,7 @@ const {
     getEnumType
 } = require('../model/enumtype');
 
+// Receive Task From POST Request..
 function httpPostWorker(req, res) {
     const slackUsername = 'Abeeujah';
     const result = postWorker(req);
@@ -30,4 +32,5 @@ function httpPostWorker(req, res) {
     }));
 }
 
+// Export HTTP Post worker..
 module.exports = httpPostWorker;

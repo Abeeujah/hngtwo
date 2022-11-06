@@ -1,3 +1,4 @@
+// Enum Properties..
 function addition(x, y) {
     return (x + y);
 }
@@ -10,6 +11,7 @@ function multiply(x, y) {
     return (x * y);
 }
 
+// Define Enum..
 const numpy = Object.freeze({
     'addition': addition,
     'subtraction': subtract,
@@ -44,6 +46,7 @@ const numpy = Object.freeze({
 //     }
 // }
 
+// Run Operations..
 function postWorker(req) {
     const words = req.body.operation_type;
     const lent = words.split(' ');
@@ -62,56 +65,16 @@ function postWorker(req) {
         });
         cent.forEach((word) => {
             switch (word) {
-                case 'addition': {
+                case 'addition': case 'plus': case 'sum': case 'add': case 'summation': {
                     ans = numpy.addition(wordNum[0], wordNum[1]);
                 }
                     break;
-                case 'plus': {
-                    ans = numpy.addition(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'sum': {
-                    ans = numpy.addition(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'add': {
-                    ans = numpy.addition(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'summation': {
-                    ans = numpy.addition(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'subtraction': {
+                case 'subtraction': case 'subtract': case 'difference': case 'minus': {
                     ans = numpy.subtraction(wordNum[0], wordNum[1]);
                 }
                     break;
-                case 'subtract': {
-                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'difference': {
-                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'minus': {
-                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'multiplication': {
+                case 'multiplication': case 'multiply': case 'poduct': case 'times': {
                     ans = numpy.multiplication(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'multiply': {
-                    ans = numpy.multiplication(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'product': {
-                    ans = numpy.multiplication(wordNum[0], wordNum[1]);
-                }
-                    break;
-                case 'times': {
-                    numpy.multiplication(wordNum[0], wordNum[1]);
                 }
                     break;
             }
@@ -126,56 +89,16 @@ function postWorker(req) {
         });
         cent.forEach((word) => {
             switch (word) {
-                case 'addition': {
+                case 'addition': case 'plus': case 'sum': case 'add': case 'summation': {
                     ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
-                case 'plus': {
-                    ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'sum': {
-                    ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'add': {
-                    ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'summation': {
-                    ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'subtraction': {
+                case 'subtraction': case 'subtract': case 'difference': case 'minus': {
                     ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
-                case 'subtract': {
-                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'difference': {
-                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'minus': {
-                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'multiplication': {
+                case 'multiplication': case 'multiply': case 'poduct': case 'times': {
                     ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'multiply': {
-                    ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'product': {
-                    ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
-                }
-                    break;
-                case 'times': {
-                    numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
             }
@@ -185,55 +108,15 @@ function postWorker(req) {
     else {
         cent.forEach((word) => {
             switch (word) {
-                case 'addition': {
+                case 'addition': case 'plus': case 'sum': case 'add': case 'summation': {
                     ans = numpy.addition(x, y);
                 }
                     break;
-                case 'plus': {
-                    ans = numpy.addition(x, y);
-                }
-                    break;
-                case 'sum': {
-                    ans = numpy.addition(x, y);
-                }
-                    break;
-                case 'add': {
-                    ans = numpy.addition(x, y);
-                }
-                    break;
-                case 'summation': {
-                    ans = numpy.addition(x, y);
-                }
-                    break;
-                case 'subtraction': {
+                case 'subtraction': case 'subtract': case 'difference': case 'minus': {
                     ans = numpy.subtraction(x, y);
                 }
                     break;
-                case 'subtract': {
-                    ans = numpy.subtraction(x, y);
-                }
-                    break;
-                case 'difference': {
-                    ans = numpy.subtraction(x, y);
-                }
-                    break;
-                case 'minus': {
-                    ans = numpy.subtraction(x, y);
-                }
-                    break;
-                case 'multiplication': {
-                    ans = numpy.multiplication(x, y);
-                }
-                    break;
-                case 'multiply': {
-                    ans = numpy.multiplication(x, y);
-                }
-                    break;
-                case 'product': {
-                    ans = numpy.multiplication(x, y);
-                }
-                    break;
-                case 'times': {
+                case 'multiplication': case 'multiply': case 'poduct': case 'times': {
                     ans = numpy.multiplication(x, y);
                 }
                     break;
